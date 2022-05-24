@@ -1,4 +1,8 @@
 /*css página produtos*/
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 
 header {
     background: #BBBBBB;
@@ -94,11 +98,6 @@ footer {
 
 /*css página contato*/
 
-main {
-    width: 940px;
-    margin: 0 auto;
-}
-
 form {
     margin: 40px 0;
 }
@@ -163,17 +162,22 @@ td, th {
 /* css da página inicial */
 .banner {
     width: 100%;
+    height: 300px;
 }
 
 .titulo-principal {
     text-align: center;
     font-size: 2em;
     margin: 0 0 1em;
-    clear: left;
+    clear: left; /*diz se elementos flutuantes (float) possam ficar ao lado deste elemento ou se devem ser movidos*/
 }
 
 .principal {
     margin: 0 0 1em;
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
 }
 
 .principal p {
@@ -189,11 +193,118 @@ td, th {
     margin: 10px 0 0;
 }
 
-.utensilios {
+.utensilios { 
     width: 120px;
-    float: left;
+    float: left; /*permite que o elemento flutue, permitindo que outros elementos fiquem ao seu redor*/
     margin: 0 20px 20px 0;
 }
-.imagembeneficios {
+
+.mapa {
+    padding: 3em 0;
+    background: linear-gradient(#FEFEFE, #888888); /*cria um degradê entre as cores informadas nos parênteses*/
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.beneficios {
+    padding: 3em 0;
+    background: #888888;
+}
+
+.conteudo-beneficios {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios {
+    width: 35%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.itens {
+    line-height: 1.5; /*alinha e espaça de acordo com o tamanho da fonte*/
+}
+
+.itens:before {
+    content: "★";
+}
+
+.itens:nth-child(1) { /*cria uma especificação para que não haja necessidade de criar uma nova classe. Neste caso ele está pegando o primeiro item dessa lista para modificar com o CSS ou com nth-child(numero do item) para selecionar qualquer elemento */
+    font-weight: bold;
+}
+
+.imagem-beneficios {
     width: 60%;
+    opacity: 1;
+    transition: 400ms;
+    box-shadow: 10px 10px 10px #000000;/*criação de sobras sobre elementos*/
+}
+
+.imagem-beneficios:hover {
+    opacity: 0.7;
+}
+
+.video {
+    width: 560px;
+    margin: 2em auto;
+}
+
+@media screen and (max-width: 393px) { /*responsividade*/
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+        width: auto;
+        padding: 0 10px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: initial;
+    }
+
+    .lista-beneficios, .imagem-beneficios {
+        width: 100%;
+    }
+
+    .produto, .produtos li {
+        display: block;
+        margin: 0 0 10px 60px;
+
+    }
+
+    .main-contato {
+        display: block;
+        padding: 0 20px 0 20px;
+    }
+
+    .input-padrao {
+        width: 85%;
+        margin: 20px 0;
+    }
+
+    .enviar {
+        width: 85%;
+        margin: 20px 20px;
+    }
+
+    .tabela-contato{
+        margin: 20px 0 20px 80px;
+    }
+
+    #select {
+        width: 30%;
+        padding: 10px 20px;
+        margin: 10px 0;
+    }
+
 }
