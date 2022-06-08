@@ -1,0 +1,4 @@
+.banner__imagem {
+    height: calc(70vh - 72px);
+    width: 100%;
+}
