@@ -1,0 +1,13 @@
+.menu__item {
+    list-style: none;
+    margin-left: 1.45rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 31px;
+}
+
+.menu__item:last-child .menu__link {
+    margin-right: 0;
+}
