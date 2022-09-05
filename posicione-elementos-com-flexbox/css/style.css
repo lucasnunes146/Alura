@@ -170,6 +170,11 @@ body {
 	font-size: 16px;
 }
 
+.rodapePrincipal-patrocinadores-list-link,
+.patrocinadores-list-link-casaDoCodigo { 
+	width: 1px;
+}
+
 .videoSobre {
 	background-color: #5E9EDC;
 	padding: 25px 0;
@@ -283,5 +288,3 @@ body {
 	}
 
 }
-
-
